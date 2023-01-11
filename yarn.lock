@@ -1037,9 +1037,9 @@ cli-width@^2.0.0:
   resolved "https://registry.npm.taobao.org/cli-width/download/cli-width-2.2.0.tgz#ff19ede8a9a5e579324147b0c11f0fbcbabed639"
   integrity sha1-/xnt6Kml5XkyQUewwR8PvLq+1jk=
 
-clipcc-l10n@3.1.9:
+clipsc-l10n@3.1.9:
   version "3.1.9"
-  resolved "https://registry.yarnpkg.com/clipcc-l10n/-/clipcc-l10n-3.1.9.tgz#9f2e1659c9a4750ddbbd3b69eb9a04a22e2031bb"
+  resolved "https://registry.yarnpkg.com/clipsc-l10n/-/clipsc-l10n-3.1.9.tgz#9f2e1659c9a4750ddbbd3b69eb9a04a22e2031bb"
   integrity sha512-d3/yXoBbe/7wk0gs5lgnmcbLIZNF/aV6O2MVf0IRSbgAunVVVDYj6zVYKPODNo3O3OSusRWnuc4fscnJ6Vt3dg==
   dependencies:
     "@babel/cli" "^7.1.2"

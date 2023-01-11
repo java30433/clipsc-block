@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const locales = require('clipcc-l10n').default;
+const locales = require('clipsc-l10n').default;
 const PATH_OUTPUT = path.resolve(__dirname, '../msg');
 let file = `// This file was automatically generated.  Do not modify.
 
@@ -16,7 +16,7 @@ goog.require('Blockly.ScratchMsgs');
 
 function getLocaleData (locale) {
   return new Promise(resolve => {
-    const translations = fs.readFileSync('./node_modules/clipcc-l10n/locale/block/'+locale+'.json');
+    const translations = fs.readFileSync('./node_modules/clipsc-l10n/locale/block/'+locale+'.json');
     resolve({
       locale: locale,
       translations: JSON.parse(translations)
@@ -34,7 +34,7 @@ Promise.all(Object.keys(locales).map(getLocaleData)).then(function (values) {
   file += '// End of combined translations\n';
   // write combined file
   fs.writeFileSync(`${PATH_OUTPUT}/scratch_msgs.js`, file);
-  console.log('Success Sync Translate from clipcc-l10n')
+  console.log('Success Sync Translate from clipsc-l10n')
 }).catch((err) => {
   console.error(err);
   process.exit(1);

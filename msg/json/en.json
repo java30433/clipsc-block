@@ -1,4 +1,10 @@
 {
+	"@metadata": {
+		"author": "Ellen Spertus <ellen.spertus@gmail.com>",
+		"lastupdated": "2023-01-11 18:21:54.530001",
+		"locale": "en",
+		"messagedocumentation" : "qqq"
+	},
 	"CONTROL_FOREVER": "forever",
 	"CONTROL_REPEAT": "repeat %1",
 	"CONTROL_IF": "if %1 then",
@@ -196,6 +202,7 @@
 	"SENSING_DISTANCETO_POINTER": "mouse-pointer",
 	"SENSING_DISTANCEBETWEENPOSITION": "distance from (x: %1, y: %2 ) to (x: %3 , y: %4 )",
 	"SENSING_DIRECTIONBETWEENPOSITION": "direction from (x: %1, y: %2 ) to (x: %3 , y: %4 )",
+	"SENSING_COLORAT": "get the color at (x: %1, y: %2)",
 	"SENSING_ASKANDWAIT": "ask %1 and wait",
 	"SENSING_ASK_TEXT": "What's your name?",
 	"SENSING_ANSWER": "answer",
@@ -244,6 +251,8 @@
 	"SENSING_CLIPCC_VERSION": "ClipCC version",
 	"SENSING_TURNONTURBOMODE": "turn on turbo mode",
 	"SENSING_TURNOFFTURBOMODE": "turn off turbo mode",
+	"SENSING_STAGE_WIDTH": "stage width",
+	"SENSING_STAGE_HEIGHT": "stage height",
 	"SOUND_PLAY": "start sound %1",
 	"SOUND_PLAYUNTILDONE": "play sound %1 until done",
 	"SOUND_STOPALLSOUNDS": "stop all sounds",

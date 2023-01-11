@@ -63,7 +63,7 @@ def init_closure_library():
   src = os.path.join(os.getcwd(), CLOSURE_ROOT_NPM, CLOSURE_LIBRARY_NPM)
   dst = os.path.join(os.getcwd(), "..", CLOSURE_LIBRARY)
   # adminPrefixArg = ["runas", "/env", "/noprofile", "/user:" + os.environ.get("USERNAME")]
-  args = ["mklink /J ", dst, src]
+  args = ["cmd /c mklink /J", dst, src]
   try:
     if not os.path.exists(dst):
       linkProc = subprocess.Popen(args, shell=True)
@@ -96,7 +96,7 @@ def import_path(fullpath):
   return module
 
 def read(filename):
-    f = open(filename)
+    f = open(filename, encoding='gb18030', errors='ignore')
     content = "".join(f.readlines())
     f.close()
     return content
@@ -418,7 +418,7 @@ class Gen_compressed(threading.Thread):
 
       headers = {"Content-type": "application/x-www-form-urlencoded"}
       conn = http.client.HTTPSConnection("closure-compiler.appspot.com")
-      conn.request("POST", "/compile", urllib.urlencode(remoteParams), headers)
+      conn.request("POST", "/compile", urllib.parse.urlencode(remoteParams), headers)
       response = conn.getresponse()
       json_str = response.read()
       conn.close()

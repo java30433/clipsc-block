@@ -1,4 +1,4 @@
-name: Sync Translation from clipcc-l10n
+name: Sync Translation from clipsc-l10n
 
 on:
   workflow_dispatch:
@@ -11,15 +11,15 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - run: yarn add https://github.com/Clipteam/clipcc-l10n
-      - run: cd ./node_modules/clipcc-l10n && yarn && yarn run build && cd ../../
+      - run: yarn add https://github.com/Clipteam/clipsc-l10n
+      - run: cd ./node_modules/clipsc-l10n && yarn && yarn run build && cd ../../
       - run: node i18n/sync_clipcc_l10n.js
       - name: Push Commit
         uses: github-actions-x/commit@v2.9
         with:
           github-token: ${{ secrets.GH_TOKEN }}
           push-branch: master
-          commit-message: Sync translation from clipcc-l10n.
+          commit-message: Sync translation from clipsc-l10n.
           files: msg/scratch_msgs.js
           name: clipbot
           email: cuizhihui030925@gmail.com

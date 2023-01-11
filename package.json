@@ -1,13 +1,13 @@
 {
-  "name": "clipcc-block",
-  "version": "3.1.8",
+  "name": "clipsc-block",
+  "version": "0.0.1",
   "description": "Blocks for Clip CC",
   "author": "Clip Team",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/clipteam/clipcc-block",
+  "homepage": "https://github.com/clipteam/clipsc-block",
   "repository": {
     "type": "git",
-    "url": "https://github.com/clipteam/clipcc-block.git"
+    "url": "https://github.com/clipteam/clipsc-block.git"
   },
   "main": "./dist/vertical.js",
   "browser": "./shim/vertical.js",
@@ -36,7 +36,7 @@
   "devDependencies": {
     "async": "2.6.4",
     "chromedriver": "^93.0",
-    "clipcc-l10n": "3.1.9",
+    "clipsc-l10n": "0.0.1",
     "copy-webpack-plugin": "4.5.1",
     "eslint": "^4.16",
     "event-stream": "3.3.4",
