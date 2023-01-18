@@ -674,6 +674,9 @@ Blockly.BlockSvg.prototype.showContextMenu_ = function(e) {
   var block = this;
   var menuOptions = [];
   if (this.isDeletable() && this.isMovable() && !block.isInFlyout) {
+    if (block.type == "clipsc.control.block.declareVar") {
+      menuOptions.push(Blockly.ContextMenu.block_declare_var_option(block));
+    }
     menuOptions.push(
         Blockly.ContextMenu.blockDuplicateOption(block, e));
     menuOptions.push(

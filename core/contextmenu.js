@@ -289,7 +289,6 @@ Blockly.ContextMenu.blockDuplicateOption = function(block, event) {
   return duplicateOption;
 };
 
-
 /**
  * Make a context menu option for generating and copying the current block to clipboard.
  * @param {!Blockly.BlockSvg} block The block where the right-click originated.

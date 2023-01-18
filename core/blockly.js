@@ -441,7 +441,7 @@ Blockly.jsonInitFactory_ = function(jsonDef) {
 /**
  * Define blocks from an array of JSON block definitions, as might be generated
  * by the Blockly Developer Tools.
- * @param {!Array.<!Object>} jsonArray An array of JSON block definitions.
+ * @param {!Array.<!Object>} jsonArray An array of JSON block definitions. 可以添加onchange函数
  */
 Blockly.defineBlocksWithJsonArray = function(jsonArray) {
   for (var i = 0; i < jsonArray.length; i++) {
@@ -460,10 +460,11 @@ Blockly.defineBlocksWithJsonArray = function(jsonArray) {
         if (Blockly.Blocks[typename]) {
           console.warn(
               'Block definition #' + i + ' in JSON array' +
-              ' overwrites prior definition of "' + typename + '".');
+              ' overwrites prior definition of "' + typename + '". ');
         }
         Blockly.Blocks[typename] = {
-          init: Blockly.jsonInitFactory_(elem)
+          init: Blockly.jsonInitFactory_(elem),
+          onchange: elem.onchange
         };
       }
     }
